@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RB2B Test Site</title>
-
+    <title>RB2B Enterprise Tracking Test</title>
     <script>
-        !function(key) {
-            if (window.reb2b) return;
-            window.reb2b = {loaded: true};
-            var s = document.createElement("script");
-            s.async = true;
-            s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
-            var first = document.getElementsByTagName("script")[0];
-            if (first && first.parentNode) {
-                first.parentNode.insertBefore(s, first);
-            } else {
-                document.head.appendChild(s);
-            }
-        }("EN4M0HLVZ1OM");
+        (function(k) {
+            window.reb2b = window.reb2b || { loaded: true };
+            var d = document, s = d.createElement("script"), f = d.getElementsByTagName("script")[0];
+            s.async = true; 
+            s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + k + "/" + k + ".js.gz";
+            if (f && f.parentNode) f.parentNode.insertBefore(s, f);
+            else d.head.appendChild(s);
+        })("EN4M0HLVZ1OM");
     </script>
 </head>
-<body>
-    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
-        <h1>Demo Website</h1>
-        <p>If you can see this, the website is live!</p>
-        <p>Now, check your RB2B dashboard to see if my visit was tracked.</p>
+<body style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#f8f9fa;">
+    <div style="text-align:center; padding:40px; background:white; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.05);">
+        <h1 style="color:#1a1a1a; margin-bottom:10px;">Deployment Active</h1>
+        <p style="color:#666; font-size:18px;">RB2B Tracking Node: <strong>EN4M0HLVZ1OM</strong></p>
+        <div style="margin-top:20px; padding:10px; background:#e7f3ff; color:#007bff; border-radius:6px; font-weight:600;">
+            Status: System Operational
+        </div>
     </div>
 </body>
 </html>
