@@ -72,6 +72,7 @@
   var acceptBtn = document.getElementById('cookieAccept');
   var rejectBtn = document.getElementById('cookieReject');
   var preferencesBtn = document.getElementById('cookiePreferences');
+  var whatsappFloat = document.querySelector('.whatsapp-float');
 
   function getStoredConsent() {
     try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
@@ -80,17 +81,32 @@
     try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* localStorage unavailable */ }
   }
 
+  // Keep the floating WhatsApp (and back-to-top) button above the cookie
+  // banner so it's never hidden behind it, on any screen size.
+  function positionFloatingButtons() {
+    var offset = 18;
+    if (banner && !banner.hidden) offset = banner.offsetHeight + 16;
+    if (whatsappFloat) whatsappFloat.style.bottom = offset + 'px';
+    if (backToTop) backToTop.style.bottom = (offset + 64) + 'px';
+  }
+
+  function dismissBanner(value) {
+    storeConsent(value);
+    banner.hidden = true;
+    positionFloatingButtons();
+  }
+
   if (!getStoredConsent()) banner.hidden = false;
+  positionFloatingButtons();
+  window.addEventListener('resize', positionFloatingButtons);
 
   acceptBtn.addEventListener('click', function () {
-    storeConsent('accepted');
-    banner.hidden = true;
     // TODO: once a CMP script (CookieYes/Cookiebot) is added in <head>,
     // this is where you'd call its "accept all" API instead.
+    dismissBanner('accepted');
   });
   rejectBtn.addEventListener('click', function () {
-    storeConsent('rejected');
-    banner.hidden = true;
+    dismissBanner('rejected');
   });
   preferencesBtn.addEventListener('click', function () {
     window.alert('Cookie preferences: replace this with your CMP\'s preferences panel (CookieYes/Cookiebot) once installed.');
