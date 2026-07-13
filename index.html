@@ -1,27 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RB2B Enterprise Tracking Test</title>
-    <script>
-        (function(k) {
-            window.reb2b = window.reb2b || { loaded: true };
-            var d = document, s = d.createElement("script"), f = d.getElementsByTagName("script")[0];
-            s.async = true; 
-            s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + k + "/" + k + ".js.gz";
-            if (f && f.parentNode) f.parentNode.insertBefore(s, f);
-            else d.head.appendChild(s);
-        })("EN4M0HLVZ1OM");
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colours Wood Works | Bespoke Joinery & Custom Furniture in Ghana</title>
+  <meta name="description" content="Colours Wood Works crafts bespoke kitchens, wardrobes, beds and custom furniture. Based in Pokuase Mayera, delivering fine joinery nationwide across Ghana.">
+  <meta name="theme-color" content="#4A3324">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Colours Wood Works | Bespoke Joinery & Custom Furniture">
+  <meta property="og:description" content="Handcrafted kitchens, wardrobes, beds and bespoke furniture. Nationwide delivery from our Pokuase Mayera workshop.">
+  <!-- REPLACE: swap for a real 1200x630 photo of finished work once available -->
+  <meta property="og:image" content="og-image-placeholder.jpg">
+  <!-- REPLACE: set to the site's final live URL -->
+  <meta property="og:url" content="https://www.example.com">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!--
+    CONSENT MANAGEMENT PLATFORM SLOT
+    Paste a third-party consent script here (e.g. CookieYes or Cookiebot) when ready.
+    It should load BEFORE any analytics/marketing scripts so it can gate them.
+    Example: <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="YOUR-ID" type="text/javascript"></script>
+  -->
 </head>
-<body style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#f8f9fa;">
-    <div style="text-align:center; padding:40px; background:white; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.05);">
-        <h1 style="color:#1a1a1a; margin-bottom:10px;">Deployment Active</h1>
-        <p style="color:#666; font-size:18px;">RB2B Tracking Node: <strong>EN4M0HLVZ1OM</strong></p>
-        <div style="margin-top:20px; padding:10px; background:#e7f3ff; color:#007bff; border-radius:6px; font-weight:600;">
-            Status: System Operational
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="Colours Wood Works home">
+        <span class="logo-colours"><span>C</span><span>o</span><span>l</span><span>o</span><span>u</span><span>r</span><span>s</span></span>
+        <span class="logo-woodworks">Wood Works</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="primaryNav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-media placeholder-tile" role="img" aria-label="[Replace: hero photo of a signature Colours Wood Works project]">
+        <span class="placeholder-label">Add hero photo here</span>
+      </div>
+      <div class="hero-content">
+        <!--
+          TAGLINE OPTIONS — pick one, or write your own:
+          1. "Fine Joinery, Handcrafted for Every Home."
+          2. "Bespoke Joinery, Built to Last a Lifetime."
+          3. "Where Colour Meets Craftsmanship."
+          4. "Custom Joinery, Delivered Nationwide."
+        -->
+        <h1>Fine Joinery, Handcrafted for Every Home.</h1>
+        <p class="hero-sub">Bespoke kitchens, wardrobes, beds and furniture — designed and joined by hand in Pokuase Mayera, delivered anywhere in Ghana.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tel:+233279604460">Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/233279604460" target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / CATEGORIES -->
+    <section id="services" class="services">
+      <h2>What We Build</h2>
+      <p class="section-intro">Every piece is joined by hand and finished to order. [Replace with your own description of your process and materials.]</p>
+
+      <div class="category-grid">
+        <article class="category-card" style="--accent: var(--accent-kitchens);">
+          <div class="category-media placeholder-tile" role="img" aria-label="[Replace: photo of a bespoke kitchen project]">
+            <span class="placeholder-label">Add photo</span>
+          </div>
+          <h3>Kitchens</h3>
+          <p>Bespoke fitted kitchens built around how you actually cook and live. [Replace with details: finishes, materials, lead time.]</p>
+          <a class="category-link" href="#gallery-kitchens">View Kitchens</a>
+        </article>
+
+        <article class="category-card" style="--accent: var(--accent-wardrobes);">
+          <div class="category-media placeholder-tile" role="img" aria-label="[Replace: photo of a bespoke wardrobe project]">
+            <span class="placeholder-label">Add photo</span>
+          </div>
+          <h3>Wardrobes</h3>
+          <p>Fitted and freestanding wardrobes, built to fill every inch of space cleanly. [Replace with details.]</p>
+          <a class="category-link" href="#gallery-wardrobes">View Wardrobes</a>
+        </article>
+
+        <article class="category-card" style="--accent: var(--accent-beds);">
+          <div class="category-media placeholder-tile" role="img" aria-label="[Replace: photo of a bespoke bed project]">
+            <span class="placeholder-label">Add photo</span>
+          </div>
+          <h3>Beds</h3>
+          <p>Solid, handcrafted bed frames built to order in the size and finish you want. [Replace with details.]</p>
+          <a class="category-link" href="#gallery-beds">View Beds</a>
+        </article>
+
+        <article class="category-card" style="--accent: var(--accent-furniture);">
+          <div class="category-media placeholder-tile" role="img" aria-label="[Replace: photo of a bespoke furniture project]">
+            <span class="placeholder-label">Add photo</span>
+          </div>
+          <h3>Bespoke Furniture</h3>
+          <p>One-off tables, chairs, shelving and custom pieces designed to your brief. [Replace with details.]</p>
+          <a class="category-link" href="#gallery-furniture">View Furniture</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <h2>Our Work</h2>
+      <p class="section-intro">A selection of recent projects, organised by category. [Replace every tile below with a real project photo.]</p>
+
+      <div class="gallery-category" id="gallery-kitchens">
+        <h3 style="--accent: var(--accent-kitchens);">Kitchens</h3>
+        <div class="gallery-grid">
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of kitchen project 1]"><span class="placeholder-label">Kitchen photo 1</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of kitchen project 2]"><span class="placeholder-label">Kitchen photo 2</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of kitchen project 3]"><span class="placeholder-label">Kitchen photo 3</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-category" id="gallery-wardrobes">
+        <h3 style="--accent: var(--accent-wardrobes);">Wardrobes</h3>
+        <div class="gallery-grid">
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of wardrobe project 1]"><span class="placeholder-label">Wardrobe photo 1</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of wardrobe project 2]"><span class="placeholder-label">Wardrobe photo 2</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of wardrobe project 3]"><span class="placeholder-label">Wardrobe photo 3</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-category" id="gallery-beds">
+        <h3 style="--accent: var(--accent-beds);">Beds</h3>
+        <div class="gallery-grid">
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bed project 1]"><span class="placeholder-label">Bed photo 1</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bed project 2]"><span class="placeholder-label">Bed photo 2</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bed project 3]"><span class="placeholder-label">Bed photo 3</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-category" id="gallery-furniture">
+        <h3 style="--accent: var(--accent-furniture);">Bespoke Furniture</h3>
+        <div class="gallery-grid">
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bespoke furniture project 1]"><span class="placeholder-label">Furniture photo 1</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bespoke furniture project 2]"><span class="placeholder-label">Furniture photo 2</span></div>
+          <div class="placeholder-tile gallery-tile" role="img" aria-label="[Replace: photo of bespoke furniture project 3]"><span class="placeholder-label">Furniture photo 3</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="about-media placeholder-tile" role="img" aria-label="[Replace: photo of the Colours Wood Works workshop or team]">
+        <span class="placeholder-label">Add workshop/team photo</span>
+      </div>
+      <div class="about-content">
+        <h2>About Colours Wood Works</h2>
+        <p>[Replace with your business story: how you started, your background in joinery, and what makes your work different. A few sentences is enough.]</p>
+        <ul class="trust-points">
+          <li>[Replace: e.g. "10+ years of joinery experience"]</li>
+          <li>Nationwide delivery across Ghana</li>
+          <li>[Replace: e.g. "Solid wood, made to order — no flat-pack"]</li>
+          <li>[Replace: e.g. "Free on-site consultation in Greater Accra"]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT & LOCATION -->
+    <section id="contact" class="contact">
+      <h2>Contact &amp; Location</h2>
+      <p class="section-intro">Reach us directly by phone or WhatsApp — we serve customers nationwide from our Pokuase Mayera workshop.</p>
+
+      <div class="contact-grid">
+        <address class="contact-card">
+          <strong class="contact-name">Colours Wood Works</strong>
+          <span class="contact-line">[Replace: exact street address], Pokuase Mayera, Greater Accra, Ghana</span>
+          <span class="contact-line">Phone: <a href="tel:+233279604460">027 960 4460</a></span>
+          <span class="contact-line">WhatsApp: <a href="https://wa.me/233279604460" target="_blank" rel="noopener">027 960 4460</a></span>
+          <span class="contact-line">Hours: [Replace: e.g. Mon–Sat, 8:00 AM–6:00 PM]</span>
+
+          <div class="contact-ctas">
+            <a class="btn btn-primary" href="tel:+233279604460">Call Now</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/233279604460" target="_blank" rel="noopener">WhatsApp Us</a>
+          </div>
+        </address>
+
+        <div class="map-embed">
+          <!--
+            REPLACE: this is a generic placeholder map centred on "Pokuase Mayera, Ghana".
+            Once your Google Business Profile is verified, replace the src below with the
+            embed URL Google gives you for your exact listing (Google Maps > Share > Embed a map).
+          -->
+          <iframe
+            title="Colours Wood Works approximate location — Pokuase Mayera, Ghana"
+            src="https://www.google.com/maps?q=Pokuase+Mayera,+Ghana&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>Colours Wood Works</strong>
+        <p>Bespoke joinery &amp; custom furniture, made in Pokuase Mayera, delivered nationwide.</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="footer-social">
+        <!-- REPLACE: add real social links or remove this list -->
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
     </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Colours Wood Works. All rights reserved.</p>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <p class="cookie-text">
+      We use cookies to improve your browsing experience and understand how visitors use this site.
+      [Replace with your actual privacy policy summary and a link to your Privacy Policy page.]
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-outline" id="cookiePreferences">Preferences</button>
+      <button type="button" class="btn btn-outline" id="cookieReject">Reject</button>
+      <button type="button" class="btn btn-primary" id="cookieAccept">Accept All</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
