@@ -4,23 +4,30 @@
    ========================================================================== */
 
 :root {
-  /* base palette — warm & natural */
-  --cream: #FAF3E9;
-  --cream-alt: #F1E6D6;
-  --greige: #ECE6DD;
-  --charcoal: #2B2420;
-  --wood: #6B4A32;
-  --wood-dark: #4A3324;
-  --border: #DDCBB2;
+  /* base palette — white + off-white cream, neutral & elegant */
+  --cream: #F7F4EE;       /* soft off-white — main page background */
+  --cream-alt: #EFEAE0;   /* slightly deeper off-white for placeholder tiles */
+  --greige: #EDE8DF;      /* off-white for alternating sections */
+  --charcoal: #2B2723;    /* near-black text */
+  --wood: #6B5A48;        /* muted neutral brown (used sparingly) */
+  --wood-dark: #3A342E;   /* dark neutral (used sparingly) */
+  --border: #E2DACF;      /* light warm-grey border */
   --white: #FFFFFF;
-  --near-black: #171310;
-  --gold: #C99A2E;
+  --near-black: #1B1815;
+  --gold: #BFA06A;        /* single restrained tan/gold accent */
 
-  /* accent palette — one signature colour per category */
-  --accent-kitchens: #C1613B;   /* terracotta */
-  --accent-wardrobes: #3F5C46;  /* deep forest green */
-  --accent-beds: #C99A2E;       /* mustard gold */
-  --accent-furniture: #3B6E7A;  /* muted teal */
+  /* single neutral accent — the four map to the same tan so the scheme
+     stays white + off-white; the "Colours" nod lives only in the logo */
+  --accent-kitchens: #BFA06A;
+  --accent-wardrobes: #BFA06A;
+  --accent-beds: #BFA06A;
+  --accent-furniture: #BFA06A;
+
+  /* logo-only multi-colour (keeps the "Colours" brand cue) */
+  --logo-1: #C1613B;
+  --logo-2: #3F5C46;
+  --logo-3: #C99A2E;
+  --logo-4: #3B6E7A;
 
   --radius: 10px;
   --max-width: 1200px;
@@ -94,12 +101,12 @@ a { color: inherit; }
   font-size: 1rem;
   font-family: var(--font-body);
 }
-.btn-primary { background: var(--wood-dark); color: var(--cream); }
-.btn-primary:hover { background: var(--wood); }
+.btn-primary { background: var(--charcoal); color: var(--white); }
+.btn-primary:hover { background: #444038; }
 .btn-whatsapp { background: #3F5C46; color: var(--cream); }
 .btn-whatsapp:hover { background: #34493A; }
-.btn-outline { background: transparent; border-color: var(--wood-dark); color: var(--wood-dark); }
-.btn-outline:hover { background: var(--wood-dark); color: var(--cream); }
+.btn-outline { background: transparent; border-color: var(--charcoal); color: var(--charcoal); }
+.btn-outline:hover { background: var(--charcoal); color: var(--white); }
 .btn-gold { background: var(--gold); color: var(--near-black); }
 .btn-gold:hover { background: #B98A22; }
 .btn-pill { border-radius: 999px; padding: 0.6em 1.4em; }
@@ -187,13 +194,13 @@ a { color: inherit; }
   white-space: nowrap;
   font-family: var(--font-serif);
 }
-.logo-colours span:nth-child(1) { color: var(--accent-kitchens); }
-.logo-colours span:nth-child(2) { color: var(--accent-wardrobes); }
-.logo-colours span:nth-child(3) { color: var(--accent-beds); }
-.logo-colours span:nth-child(4) { color: var(--accent-furniture); }
-.logo-colours span:nth-child(5) { color: var(--accent-kitchens); }
-.logo-colours span:nth-child(6) { color: var(--accent-wardrobes); }
-.logo-colours span:nth-child(7) { color: var(--accent-beds); }
+.logo-colours span:nth-child(1) { color: var(--logo-1); }
+.logo-colours span:nth-child(2) { color: var(--logo-2); }
+.logo-colours span:nth-child(3) { color: var(--logo-3); }
+.logo-colours span:nth-child(4) { color: var(--logo-4); }
+.logo-colours span:nth-child(5) { color: var(--logo-1); }
+.logo-colours span:nth-child(6) { color: var(--logo-2); }
+.logo-colours span:nth-child(7) { color: var(--logo-3); }
 .logo-woodworks { color: var(--charcoal); }
 
 .nav-toggle {
@@ -264,7 +271,7 @@ a { color: inherit; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--wood-dark);
+  background: var(--charcoal);
   color: var(--cream);
   border: none;
   cursor: pointer;
@@ -509,7 +516,7 @@ section { padding: 3.5em 1.25em; }
 .magazine-card h3 { font-size: 1.05rem; }
 
 /* ---------- footer ---------- */
-.site-footer { background: var(--wood-dark); color: var(--cream); padding: 2.5em 1.25em 1.5em; }
+.site-footer { background: var(--near-black); color: var(--cream); padding: 2.5em 1.25em 1.5em; }
 .footer-content {
   max-width: var(--max-width);
   margin: 0 auto;
