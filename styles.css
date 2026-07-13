@@ -252,7 +252,7 @@ a { color: inherit; }
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #111111;
+  background: #25D366;
   color: #fff;
   display: flex;
   align-items: center;
@@ -260,7 +260,7 @@ a { color: inherit; }
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   text-decoration: none;
 }
-.whatsapp-float svg { width: 28px; height: 28px; }
+.whatsapp-float svg { width: 30px; height: 30px; }
 
 .back-to-top {
   position: fixed;
@@ -286,7 +286,7 @@ a { color: inherit; }
 section { padding: 3.5em 1.25em; }
 .section-inner { max-width: var(--max-width); margin: 0 auto; }
 .section-heading { text-align: center; margin-bottom: 2em; }
-.section-heading h2 { font-size: 1.8rem; }
+.section-heading h2 { font-size: 2.2rem; }
 .section-intro { max-width: 65ch; color: var(--wood); }
 .center { text-align: center; }
 .bg-greige { background: var(--greige); }
@@ -338,7 +338,7 @@ section { padding: 3.5em 1.25em; }
   color: #fff;
 }
 .hero-content h1 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-style: italic;
   max-width: 14ch;
   text-shadow: 0 3px 12px rgba(0,0,0,0.4);
@@ -373,10 +373,10 @@ section { padding: 3.5em 1.25em; }
 }
 
 /* ---------- quote heading (home) ---------- */
-.quote-heading { text-align: center; }
+.quote-heading { text-align: center; padding-top: 4em; padding-bottom: 4em; }
 .quote-heading h2 {
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   max-width: 20ch;
   margin: 0 auto;
 }
@@ -544,7 +544,7 @@ section { padding: 3.5em 1.25em; }
 
 /* ---------- page hero (secondary pages) ---------- */
 .page-hero { text-align: center; padding-bottom: 2em; }
-.page-hero h1 { font-size: 2rem; }
+.page-hero h1 { font-size: 2.6rem; }
 .page-hero-sub { max-width: 55ch; margin: 0 auto; color: var(--wood); }
 
 /* ---------- gallery grids (category + gallery overview pages) ---------- */
@@ -690,7 +690,7 @@ section { padding: 3.5em 1.25em; }
    Tablet — 640px+
    ========================================================================== */
 @media (min-width: 640px) {
-  .hero-content h1 { font-size: 2.4rem; max-width: 16ch; }
+  .hero-content h1 { font-size: 2.9rem; max-width: 16ch; }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .finishes-grid { grid-template-columns: repeat(3, 1fr); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
@@ -721,7 +721,7 @@ section { padding: 3.5em 1.25em; }
     gap: 1.6em;
   }
 
-  .hero-content h1 { font-size: 3rem; max-width: 18ch; }
+  .hero-content h1 { font-size: 3.6rem; max-width: 18ch; }
 
   .category-grid { grid-template-columns: repeat(4, 1fr); }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
@@ -739,8 +739,9 @@ section { padding: 3.5em 1.25em; }
 
   .contact-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
 
-  .quote-heading h2 { font-size: 2.4rem; }
-  .section-heading h2 { font-size: 2.2rem; }
+  .quote-heading h2 { font-size: 3.4rem; }
+  .section-heading h2 { font-size: 3rem; }
+  .page-hero h1 { font-size: 3.4rem; }
 }
 
 /* ==========================================================================
