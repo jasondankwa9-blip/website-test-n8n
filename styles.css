@@ -4,30 +4,29 @@
    ========================================================================== */
 
 :root {
-  /* base palette — white + off-white cream, neutral & elegant */
-  --cream: #F7F4EE;       /* soft off-white — main page background */
-  --cream-alt: #EFEAE0;   /* slightly deeper off-white for placeholder tiles */
-  --greige: #EDE8DF;      /* off-white for alternating sections */
-  --charcoal: #2B2723;    /* near-black text */
-  --wood: #6B5A48;        /* muted neutral brown (used sparingly) */
-  --wood-dark: #3A342E;   /* dark neutral (used sparingly) */
-  --border: #E2DACF;      /* light warm-grey border */
+  /* base palette — black & white */
+  --cream: #FFFFFF;       /* page background (white) */
+  --cream-alt: #EDEDED;   /* light grey for placeholder tiles */
+  --greige: #F4F4F4;      /* light grey for alternating sections */
+  --charcoal: #111111;    /* black text */
+  --wood: #333333;        /* dark grey (used sparingly) */
+  --wood-dark: #1A1A1A;   /* near-black (used sparingly) */
+  --border: #DADADA;      /* light grey border */
   --white: #FFFFFF;
-  --near-black: #1B1815;
-  --gold: #BFA06A;        /* single restrained tan/gold accent */
+  --near-black: #000000;
+  --gold: #111111;        /* accent = black in a mono scheme */
 
-  /* single neutral accent — the four map to the same tan so the scheme
-     stays white + off-white; the "Colours" nod lives only in the logo */
-  --accent-kitchens: #BFA06A;
-  --accent-wardrobes: #BFA06A;
-  --accent-beds: #BFA06A;
-  --accent-furniture: #BFA06A;
+  /* single neutral accent — all black in the mono scheme */
+  --accent-kitchens: #111111;
+  --accent-wardrobes: #111111;
+  --accent-beds: #111111;
+  --accent-furniture: #111111;
 
-  /* logo-only multi-colour (keeps the "Colours" brand cue) */
-  --logo-1: #C1613B;
-  --logo-2: #3F5C46;
-  --logo-3: #C99A2E;
-  --logo-4: #3B6E7A;
+  /* logo — monochrome black to match the scheme */
+  --logo-1: #111111;
+  --logo-2: #111111;
+  --logo-3: #111111;
+  --logo-4: #111111;
 
   --radius: 10px;
   --max-width: 1200px;
@@ -102,18 +101,18 @@ a { color: inherit; }
   font-family: var(--font-body);
 }
 .btn-primary { background: var(--charcoal); color: var(--white); }
-.btn-primary:hover { background: #444038; }
-.btn-whatsapp { background: #3F5C46; color: var(--cream); }
-.btn-whatsapp:hover { background: #34493A; }
+.btn-primary:hover { background: #333333; }
+.btn-whatsapp { background: transparent; border-color: var(--charcoal); color: var(--charcoal); }
+.btn-whatsapp:hover { background: var(--charcoal); color: var(--white); }
 .btn-outline { background: transparent; border-color: var(--charcoal); color: var(--charcoal); }
 .btn-outline:hover { background: var(--charcoal); color: var(--white); }
-.btn-gold { background: var(--gold); color: var(--near-black); }
-.btn-gold:hover { background: #B98A22; }
+.btn-gold { background: var(--charcoal); color: var(--white); }
+.btn-gold:hover { background: #333333; }
 .btn-pill { border-radius: 999px; padding: 0.6em 1.4em; }
 
 /* ---------- placeholder image tiles ---------- */
 .placeholder-tile {
-  background: repeating-linear-gradient(45deg, var(--cream-alt), var(--cream-alt) 10px, #E8D9C2 10px, #E8D9C2 20px);
+  background: repeating-linear-gradient(45deg, var(--cream-alt), var(--cream-alt) 10px, #DCDCDC 10px, #DCDCDC 20px);
   border: 2px dashed var(--border);
   border-radius: var(--radius);
   display: flex;
@@ -126,19 +125,19 @@ a { color: inherit; }
   overflow: hidden;
 }
 .placeholder-tile.on-dark {
-  background: repeating-linear-gradient(45deg, #2A2420, #2A2420 10px, #332B24 10px, #332B24 20px);
-  border-color: #4A3E30;
-  color: var(--cream);
+  background: repeating-linear-gradient(45deg, #1A1A1A, #1A1A1A 10px, #262626 10px, #262626 20px);
+  border-color: #3A3A3A;
+  color: var(--white);
 }
 .placeholder-label {
-  background: rgba(250, 243, 233, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 0.4em 0.9em;
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
   z-index: 1;
 }
-.on-dark .placeholder-label { background: rgba(23, 19, 16, 0.85); color: var(--cream); }
+.on-dark .placeholder-label { background: rgba(0, 0, 0, 0.85); color: var(--white); }
 
 .tile-overlay-title {
   position: absolute;
@@ -157,9 +156,9 @@ a { color: inherit; }
 }
 
 .notice-banner {
-  background: #FFF4CF;
-  border: 1px solid #E8D28A;
-  color: #4A3324;
+  background: #F4F4F4;
+  border: 1px solid #DADADA;
+  color: #111111;
   border-radius: var(--radius);
   padding: 1em 1.25em;
   font-size: 0.95rem;
@@ -253,7 +252,7 @@ a { color: inherit; }
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #25D366;
+  background: #111111;
   color: #fff;
   display: flex;
   align-items: center;
@@ -476,7 +475,7 @@ section { padding: 3.5em 1.25em; }
 .testimonials-scrim {
   position: absolute;
   inset: 0;
-  background: rgba(250, 243, 233, 0.88);
+  background: rgba(244, 244, 244, 0.92);
   z-index: 1;
 }
 .testimonials .section-inner { position: relative; z-index: 2; }
@@ -600,7 +599,7 @@ section { padding: 3.5em 1.25em; }
 /* ---------- policy cards ---------- */
 .policy-grid { display: grid; grid-template-columns: 1fr; gap: 1.25em; }
 .policy-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5em; background: var(--white); }
-.policy-card.highlight { border-color: var(--accent-kitchens); background: #FBF0EA; }
+.policy-card.highlight { border-color: var(--charcoal); border-width: 2px; background: #F4F4F4; }
 .policy-icon { font-size: 1.5rem; margin-bottom: 0.5em; }
 .policy-card h3 { font-size: 1.05rem; }
 
