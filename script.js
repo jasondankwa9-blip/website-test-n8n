@@ -85,7 +85,7 @@
   // banner so it's never hidden behind it, on any screen size.
   function positionFloatingButtons() {
     var offset = 18;
-    if (banner && !banner.hidden) offset = banner.offsetHeight + 28;
+    if (banner && !banner.hidden) offset = banner.offsetHeight + 8;
     if (whatsappFloat) whatsappFloat.style.bottom = offset + 'px';
     if (backToTop) backToTop.style.bottom = (offset + 64) + 'px';
   }
