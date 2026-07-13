@@ -286,11 +286,11 @@ a { color: inherit; }
    buttons well above it so the WhatsApp icon is never attached to / on top of
    the banner. JS refines the exact offset to the banner's measured height; this
    is the fallback if JS doesn't run. */
-body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 150px; }
-body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 214px; }
+body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 160px !important; }
+body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 224px !important; }
 @media (max-width: 639px) {
-  body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 250px; }
-  body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 314px; }
+  body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 300px !important; }
+  body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 364px !important; }
 }
 
 /* ---------- generic section layout ---------- */
