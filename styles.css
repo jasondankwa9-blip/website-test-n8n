@@ -282,6 +282,17 @@ a { color: inherit; }
 }
 .back-to-top.visible { display: flex; }
 
+/* Pure-CSS guarantee: while the cookie banner is visible, lift the floating
+   buttons well above it so the WhatsApp icon is never attached to / on top of
+   the banner. JS refines the exact offset to the banner's measured height; this
+   is the fallback if JS doesn't run. */
+body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 150px; }
+body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 214px; }
+@media (max-width: 639px) {
+  body:has(#cookieBanner:not([hidden])) .whatsapp-float { bottom: 250px; }
+  body:has(#cookieBanner:not([hidden])) .back-to-top { bottom: 314px; }
+}
+
 /* ---------- generic section layout ---------- */
 section { padding: 3.5em 1.25em; }
 .section-inner { max-width: var(--max-width); margin: 0 auto; }

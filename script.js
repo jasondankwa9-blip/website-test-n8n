@@ -85,7 +85,7 @@
   // banner so it's never hidden behind it, on any screen size.
   function positionFloatingButtons() {
     var offset = 18;
-    if (banner && !banner.hidden) offset = banner.offsetHeight + 16;
+    if (banner && !banner.hidden) offset = banner.offsetHeight + 28;
     if (whatsappFloat) whatsappFloat.style.bottom = offset + 'px';
     if (backToTop) backToTop.style.bottom = (offset + 64) + 'px';
   }
@@ -98,7 +98,12 @@
 
   if (!getStoredConsent()) banner.hidden = false;
   positionFloatingButtons();
+  requestAnimationFrame(positionFloatingButtons);
+  window.addEventListener('load', positionFloatingButtons);
   window.addEventListener('resize', positionFloatingButtons);
+  if (window.ResizeObserver) {
+    try { new ResizeObserver(positionFloatingButtons).observe(banner); } catch (e) {}
+  }
 
   acceptBtn.addEventListener('click', function () {
     // TODO: once a CMP script (CookieYes/Cookiebot) is added in <head>,
