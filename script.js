@@ -71,7 +71,6 @@
 
   var acceptBtn = document.getElementById('cookieAccept');
   var rejectBtn = document.getElementById('cookieReject');
-  var preferencesBtn = document.getElementById('cookiePreferences');
   var whatsappFloat = document.querySelector('.whatsapp-float');
 
   function getStoredConsent() {
@@ -112,8 +111,5 @@
   });
   rejectBtn.addEventListener('click', function () {
     dismissBanner('rejected');
-  });
-  preferencesBtn.addEventListener('click', function () {
-    window.alert('Cookie preferences: replace this with your CMP\'s preferences panel (CookieYes/Cookiebot) once installed.');
   });
 })();
