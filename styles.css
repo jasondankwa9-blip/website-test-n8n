@@ -522,9 +522,68 @@ section { padding: 3.5em 1.25em; }
 }
 
 /* ---------- magazine ---------- */
-.magazine-card { text-align: left; }
-.magazine-photo { min-height: 200px; margin-bottom: 0.75em; }
-.magazine-card h3 { font-size: 1.05rem; }
+.magazine-card { text-align: left; display: block; text-decoration: none; color: inherit; transition: transform 0.2s ease; }
+a.magazine-card:hover, a.magazine-card:focus-visible { transform: translateY(-4px); }
+.magazine-photo { min-height: 200px; margin-bottom: 0.85em; }
+.magazine-cat {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: 999px;
+  padding: 0.2em 0.7em;
+  margin-bottom: 0.5em;
+}
+.magazine-card h3 { font-size: 1.1rem; margin: 0 0 0.4em; }
+.magazine-teaser { font-size: 0.92rem; color: #444; margin: 0 0 0.6em; }
+.magazine-readmore { font-size: 0.85rem; font-weight: 600; color: var(--charcoal); }
+a.magazine-card:hover .magazine-readmore { text-decoration: underline; }
+
+/* ---------- article pages (magazine articles) ---------- */
+.article-hero {
+  position: relative;
+  min-height: 52vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.article-hero-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.35) 100%);
+}
+.article-hero-inner { position: relative; z-index: 1; padding-top: 3em; padding-bottom: 2.5em; }
+.article-hero .eyebrow { color: #fff; opacity: 0.9; }
+.article-hero h1 { color: #fff; max-width: 20ch; }
+.article-body { max-width: 900px; }
+.article-lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+  margin: 0 0 2.5em;
+}
+.article-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-bottom: 2.5em;
+}
+.article-photo {
+  width: 100%;
+  min-height: 240px;
+  border-radius: 4px;
+}
+.article-text h2 { font-size: 1.4rem; margin: 0 0 0.5em; }
+.article-text p { margin: 0; color: #333; line-height: 1.6; }
+.article-back { color: var(--charcoal); font-weight: 600; text-decoration: none; }
+.article-back:hover { text-decoration: underline; }
+@media (min-width: 768px) {
+  .article-block { grid-template-columns: 1fr 1fr; gap: 2em; align-items: center; }
+  .article-block:nth-child(even) .article-photo { order: 2; }
+  .article-photo { min-height: 300px; }
+}
 
 /* ---------- footer ---------- */
 .site-footer { background: var(--near-black); color: var(--cream); padding: 2.5em 1.25em 1.5em; }
