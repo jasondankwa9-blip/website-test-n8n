@@ -139,6 +139,15 @@ a { color: inherit; }
 }
 .on-dark .placeholder-label { background: rgba(0, 0, 0, 0.85); color: var(--white); }
 
+/* real photo tiles: cover the tile, drop the dashed placeholder look */
+.placeholder-tile.has-img {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  border: none;
+}
+.has-img .placeholder-label { display: none; }
+
 .tile-overlay-title {
   position: absolute;
   inset: 0;
