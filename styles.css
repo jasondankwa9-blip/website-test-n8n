@@ -339,16 +339,13 @@ section { padding: 3.5em 1.25em; }
 .hero-slideshow .hero-slide-2 { background-image: url('images/hero/hero-2.jpg?v2'); }
 .hero-slideshow .hero-slide-3 { background-image: url('images/hero/hero-3.jpg?v2'); }
 
-/* Portrait phone hero photos: add images/hero/hero-mobile-1/2/3.jpg, then
-   uncomment. A tall portrait crop of the same scenes avoids the aggressive
-   cover-fit crop a 16:9 image needs on a narrow tall screen. */
-/*
+/* Portrait phone hero photos: tall crops of the same scenes, so a narrow
+   tall phone screen shows a portrait image instead of a hard-cropped 16:9. */
 @media (max-width: 640px) {
   .hero-slideshow .hero-slide-1 { background-image: url('images/hero/hero-mobile-1.jpg?v1'); }
   .hero-slideshow .hero-slide-2 { background-image: url('images/hero/hero-mobile-2.jpg?v1'); }
   .hero-slideshow .hero-slide-3 { background-image: url('images/hero/hero-mobile-3.jpg?v1'); }
 }
-*/
 @keyframes kenburns {
   0%   { opacity: 0; transform: scale(1); }
   4%   { opacity: 1; }
