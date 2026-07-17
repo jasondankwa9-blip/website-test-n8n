@@ -345,6 +345,14 @@ section { padding: 3.5em 1.25em; }
   .hero-slideshow .hero-slide-1 { background-image: url('images/hero/hero-mobile-1.jpg?v1'); }
   .hero-slideshow .hero-slide-2 { background-image: url('images/hero/hero-mobile-2.jpg?v1'); }
   .hero-slideshow .hero-slide-3 { background-image: url('images/hero/hero-mobile-3.jpg?v1'); }
+
+  /* On phone, move the hero text to the bottom and switch to a bottom-weighted
+     scrim so white text stays readable over the lower part of the photo.
+     Two-class selectors so these win over the base rules further down the file. */
+  .hero .hero-content { justify-content: flex-end; padding-bottom: 3.25em; }
+  .hero .hero-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.30) 100%);
+  }
 }
 @keyframes kenburns {
   0%   { opacity: 0; transform: scale(1); }

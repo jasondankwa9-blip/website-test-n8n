@@ -72,6 +72,8 @@
   var acceptBtn = document.getElementById('cookieAccept');
   var rejectBtn = document.getElementById('cookieReject');
   var whatsappFloat = document.querySelector('.whatsapp-float');
+  var hero = document.querySelector('.hero');
+  var heroContent = document.querySelector('.hero-content');
 
   function getStoredConsent() {
     try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
@@ -87,6 +89,19 @@
     if (banner && !banner.hidden) offset = banner.offsetHeight + 8;
     if (whatsappFloat) whatsappFloat.style.bottom = offset + 'px';
     if (backToTop) backToTop.style.bottom = (offset + 64) + 'px';
+
+    // On phones the hero text is bottom-aligned; while the cookie banner is
+    // showing, lift the text just above it so the subtext is never hidden.
+    // Once the banner is dismissed, clear the inline padding so the CSS bottom
+    // padding takes over and the text sits at the true bottom of the image.
+    if (heroContent) {
+      var lift = 0;
+      if (hero && banner && !banner.hidden && window.innerWidth <= 640) {
+        var overlap = hero.getBoundingClientRect().bottom - banner.getBoundingClientRect().top;
+        if (overlap > 0) lift = overlap + 20;
+      }
+      heroContent.style.paddingBottom = lift ? lift + 'px' : '';
+    }
   }
 
   function dismissBanner(value) {
