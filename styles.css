@@ -782,6 +782,14 @@ a.magazine-card:hover .magazine-readmore { text-decoration: underline; }
 .cookie-banner .btn-outline { border-color: var(--cream); color: var(--cream); }
 .cookie-banner .btn-outline:hover { background: var(--cream); color: var(--charcoal); }
 
+/* Compact cookie banner on phones so it doesn't take up so much of the screen. */
+@media (max-width: 640px) {
+  .cookie-banner { padding: 0.8em 1em; gap: 0.55em; }
+  .cookie-text { font-size: 0.76rem; line-height: 1.35; }
+  .cookie-actions { gap: 0.5em; }
+  .cookie-banner .btn { padding: 0.5em 0.9em; font-size: 0.82rem; }
+}
+
 /* ==========================================================================
    Tablet — 640px+
    ========================================================================== */
